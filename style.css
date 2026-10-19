@@ -1,0 +1,487 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+
+background-color: #1e1e1e;
+font-family: sans-serif;
+color: #fff;
+line-height: 1.6;
+
+}
+.main-container{
+    
+display: grid;
+max-width: 1300px;
+grid-template-columns: 350px 1fr;
+gap: 40px;
+padding-top: 40px;
+margin: auto;
+
+}
+.sidebar{
+
+    height: 100vh;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a; 
+    border-radius: 16px;
+    padding: 40px;
+    position: sticky;
+    top: 40px;
+    
+
+}
+.main-content{
+
+    /* height: 90vh; */
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a; 
+    border-radius: 16px;
+    padding: 40px;
+    
+
+}
+
+    /* Profile Section */
+
+.profile{
+    text-align: center;
+}
+
+.profile img{
+
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid ;
+    border: 1px solid #3a3a3a;
+}
+.profile h2 {
+ 
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 20px;
+  color: #e0e0e0;
+
+}
+
+.profile p {
+    background-color: #1e1e1e;
+    padding: 5px 15px;
+    color: #ffbf00;;
+    border: 1px solid #3a3a3a;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px ;
+}
+
+
+/* Contact Section */
+
+.contact{
+
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 2px solid #3a3a3a;
+    
+}
+
+.label {
+font-weight: 500;
+font-size: 0.9rem;
+color: #a0a0a0;
+}
+.value {
+/* font-size: 0.9rem; */
+color: #fff;
+margin-top: 5px;
+text-decoration: none;
+}
+
+.email,.phone,.location{
+    margin-top: 10px;
+}
+
+
+/* Social Media Section*/
+
+.social{
+
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 2px solid #3a3a3a;
+    text-align: center;
+
+}
+
+.social img{
+
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+    color: white;
+    filter: grayscale(1) invert(0.7);
+    transition: all 0.3s ease;
+}
+.social img:hover{
+
+    filter: brightness(0) saturate(100%)
+}
+
+/* Main content */
+
+/* Navigation */
+
+.navigation{
+
+    text-decoration: none;
+    border-bottom: 2px solid #3a3a3a;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+nav{
+    
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+    gap: 20px;
+    
+
+}
+nav a{
+    text-decoration: none;
+    color: #a0a0a0;
+    font-weight: 500;
+    font-size: 17px;
+    transition: color 0.3s ease;
+
+}
+.Active{
+    
+    color: #FFBF00;
+
+}
+nav a:hover{
+
+    color: #FFBF00;
+}
+
+/* About me */
+
+.heading{  
+    color: #e0e0e0;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.line{
+    width: 60px;
+    height: 4px;
+    background-color: #FFBF00;
+    margin-bottom: 15px;
+}
+.content{
+    text-align: justify;
+    color: #a0a0a0;
+}
+#about{
+    margin-bottom: 30px;
+}
+
+/* Skills */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px,1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+.items {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    
+    /* Dynamic Glassmorphism Background */
+    background-color: rgba(30, 30, 30, 0.65);
+    
+    /* Background Blur Filter (Frosted Glass Effect) */
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    
+    /* Subtle Glass Border */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+
+    will-change: transform, box-shadow, border-color, filter;
+    backface-visibility: hidden;
+
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+                box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+                border-color 0.35s ease,
+                filter 0.35s ease;
+}
+
+/* Card Ke Andar Ke Icons ya Images Par Soft Glow Filter */
+.items img, 
+.items .icon {
+    filter: drop-shadow(0 0 0px rgba(168, 85, 247, 0));
+    transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.items:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(168, 85, 247, 0.6);
+    
+    /* Card Outer Glow Shadow */
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.7),
+                0 0 25px 4px rgba(168, 85, 247, 0.3);
+}
+
+/* Hover Hone Par Inner Image/Icon Par Glowing Filter */
+.items:hover img,
+.items:hover .icon {
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.7));
+    transform: scale(1.05);
+}
+.items img{
+
+    height: 48px;
+    width: 48px;
+    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+    margin-bottom: 10px;
+}
+.items h3{
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+
+
+/* Education */
+
+#education{
+    margin-top: 20px;
+}
+.edtech{
+    position: relative;
+    margin-top: 30px;
+}
+
+.edfirst,.edsecond{
+    margin-bottom: 25px;
+    padding-left: 25px;
+    position: relative;
+}
+.year{
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+}
+.degree{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+.collage{
+    font-style: italic;
+    color: #e0e0e0;
+    margin-bottom: 7pxpx;
+}
+.work{
+    color: #a0a0a0;
+    margin-top: 15px;
+}
+.goal{
+    height: 15px;
+    background-color: #3a3a3a;
+    width: 15px;
+    border:3px solid #FFBF00;
+    border-radius: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+.Liner{
+    width: 2px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 5.7px;
+    border: 2px solid #3a3a3a;
+}
+
+/* Portfolio */
+
+.project-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.project p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.project img{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+.project {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    border: 1px solid #3a3a3a; 
+    overflow: hidden;
+
+    /* Performance optimization & Smoothing */
+    will-change: transform, box-shadow;
+    backface-visibility: hidden;
+
+    /* Fixed typo 'tranform' -> 'transform' & Applied Smooth Bezier */
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+.card{
+    padding: 20px;
+}
+.card h3{
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+.card p{
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+
+}
+.project span{
+    /* height: 10px;
+    width: 15px; */
+    border-radius: 5px;
+    padding: 4px 8px;
+    background-color:rgba(255, 191,0, 0.1);
+    color: #FFBF00;
+    margin-right: 5px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES (ADD AT THE BOTTOM)
+   ========================================== */
+
+/* 1. Large Laptops & Desktops (1200px and below) */
+@media screen and (max-width: 1200px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .sidebar {
+        height: auto;
+        position: static;
+        padding: 30px 20px;
+    }
+}
+
+/* 2. Tablets & Small Screens (900px and below) */
+@media screen and (max-width: 900px) {
+    .navigation nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* 3. Mobile Devices (768px and below) */
+@media screen and (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .sidebar, 
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    /* Skills Grid layout adjustment for small screens */
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 15px;
+    }
+
+    .items {
+        padding: 15px 10px;
+    }
+
+    /* Project Cards single column on mobile */
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Navigation styling for mobile touch target */
+    nav a {
+        font-size: 15px;
+        padding: 5px 8px;
+    }
+
+    /* Education Timeline spacing adjustment */
+    .edfirst, 
+    .edsecond {
+        padding-left: 20px;
+    }
+
+    .goal {
+        width: 12px;
+        height: 12px;
+        left: 0px;
+    }
+
+    .Liner {
+        left: 5px;
+    }
+}
+
+/* 4. Small Mobile Screens (480px and below) */
+@media screen and (max-width: 480px) {
+    .profile img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profile h2 {
+        font-size: 1.3rem;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    /* Social icons layout */
+    .social img {
+        height: 22px;
+        width: 22px;
+        margin: 4px;
+    }
+
+    /* Responsive grid for small skill tags */
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
